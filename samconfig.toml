@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "sam-food-app-prime"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-vxact1d0w1k3"
+s3_prefix = "sam-food-app-prime"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "StackTagName=\"prod\" EnvironmentTagName=\"prod\" EnvironmentAPIGatewayStageName=\"prod\""
+
