@@ -23,6 +23,9 @@ exports.handler =  (event, context, callback) => {
     } else {
       const response = {
         statusCode: 200,
+        headers: {
+          "Access-Control-Allow-Origin" : "*" // Required for CORS support to work
+        },
         body: JSON.stringify(data.Items)
       }
 

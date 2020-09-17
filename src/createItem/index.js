@@ -30,7 +30,7 @@ exports.handler =  (event, context, callback) => {
   const sampleMessage = {
     "statusCode" : 201,
     "body" : JSON.stringify({
-      "message" : " The item with an id " + event.requestContext.requestId + " was created." 
+      "orderNo" : event.requestContext.requestId
     })
   }
 

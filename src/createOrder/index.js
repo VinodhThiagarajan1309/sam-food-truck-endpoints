@@ -28,8 +28,11 @@ exports.handler =  (event, context, callback) => {
 
   const sampleMessage = {
     "statusCode" : 201,
+    headers: {
+      "Access-Control-Allow-Origin" : "*" // Required for CORS support to work
+    },
     "body" : JSON.stringify({
-      "message" : " Your order number is " + event.requestContext.requestId + "." 
+      "orderNo" : event.requestContext.requestId
     })
   }
 
